@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function calculateBill(total, tax, tip) {
+        return total + total * tax + total * tip;
+      }
+
+      const totalBill = calculateBill(100, 0.13, 0.15);
+
+      // default parameter with es5
+      function calculateBilldefaultES5(total, tax, tip) {
+        tax = tax || 0.13;
+        tip = tip || 0.15;
+        return total + total * tax + total * tip;
+      }
+
+      const totalBillES5 = calculateBilldefaultES5(100);
+
+      // default parameter with es6
+      function calculateBillES6(total, tax = 0.13, tip = 0.15) {
+        return total + total * tax + total * tip;
+      }
+
+      const totalBillES6 = calculateBillES6(100, undefined, 0.25);
+    </script>
+  </body>
+</html>
