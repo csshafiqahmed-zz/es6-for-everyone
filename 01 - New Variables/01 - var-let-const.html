@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>let and const</title>
+  </head>
+  <body>
+    <script>
+      // var is function scooped, will not leak outside here
+      function test() {
+        var test = 20;
+        console.log(test);
+      }
+      test();
+
+      var number = 50;
+      if (number > 20) {
+        // since var is blocked scopped, will leak to the global object here
+        var sum = number + 10;
+        console.log(`This is the total: ${sum}`);
+
+        // we use let or const that are blocked scoped, will not leak
+        let sum1 = number + 10;
+        console.log(`This is the total: ${sum1}`);
+      }
+    </script>
+  </body>
+</html>
