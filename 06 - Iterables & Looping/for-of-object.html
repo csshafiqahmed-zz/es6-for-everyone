@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iterables & Looping</title>
+  </head>
+  <body>
+    <script>
+      const cuts = ['Chuck', 'Brisket', 'Shank', 'Short rib'];
+
+      // cuts.forEach(cut => console.log(cut));
+
+      // // will loop on everything, even things added to the prototype of the array
+      // for (const i in cuts) {
+      //   console.log(cuts[i]);
+      // }
+
+      const apple = {
+        color: 'Red',
+        size: 'Medium',
+        weight: 50,
+        sugar: 10,
+      };
+
+      for (const prop of Object.keys(apple)) {
+        const value = apple[prop];
+        console.log(value, prop);
+      }
+    </script>
+  </body>
+</html>
