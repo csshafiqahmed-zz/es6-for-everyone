@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Destructuring in Action!</title>
+  </head>
+  <body>
+    <script>
+      let inRing = 'Babushka';
+      let onSide = 'Rey Misterio';
+
+      console.log({ inRing, onSide });
+      [inRing, onSide] = [onSide, inRing];
+      console.log({ inRing, onSide });
+    </script>
+  </body>
+</html>
