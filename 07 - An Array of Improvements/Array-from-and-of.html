@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Array .from() and .of()</title>
+  </head>
+  <body>
+    <div class="people">
+      <p>Wes</p>
+      <p>Kait</p>
+      <p>Snickers</p>
+    </div>
+    <script>
+      // const people = document.querySelectorAll('.people p');
+      // const names = Array.from(people, p => p.textContent);
+      // const people = Array.from(document.querySelectorAll('.people p'));
+      // const names = people.map(p => p.textContent);
+      // const people = document.querySelectorAll('.people p');
+      // const peopleArray = Array.from(people, person => {
+      //   console.log(person);
+      //   return person.textContent;
+      // });
+      // console.log(peopleArray);
+
+      // // const names = people.map(person => person.textContent);
+
+      // function sumAll() {
+      //   const nums = Array.from(arguments);
+      //   return nums.reduce((prev, next) => prev + next, 0);
+      // }
+
+      // sumAll(2, 34, 23, 234, 234, 234234, 234234, 2342);
+
+      // const ages = Array.of(12,4,23,62,34);
+      // console.log(ages);
+
+      // function sumAll() {
+      //   return Array.from(arguments).reduce(
+      //     (sum, current) => (sum += current),
+      //     0
+      //   );
+      // }
+      // const total = sumAll(2, 32, 323, 2323, 232, 323, 2323, 23, 32, 3);
+
+      // function sumAll(...args) {
+      //   return args.reduce((sum, current) => (sum += current), 0);
+      // }
+      // const total = sumAll(2, 32, 323, 2323, 232, 323, 2323, 23, 32, 3);
+
+      const ages = Array.of(12, 12, 13, 14);
+      console.log(ages);
+    </script>
+  </body>
+</html>
