@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inheritance Review</title>
+  </head>
+  <body>
+    <script>
+      // function Dog(name, breed) {
+      //   this.name = name;
+      //   this.breed = breed;
+      // }
+
+      // Dog.prototype.bark = function() {
+      //   console.log(`Bark Bark! My name is ${this.name}`);
+      // };
+
+      // Dog.prototype.cuddle = function() {
+      //   console.log(`I love you owner!`);
+      // };
+
+      // const snickers = new Dog('Snickers', 'King Charles');
+      // const sunny = new Dog('Sunny', 'Golden Doodle');
+
+      class Dog {
+        constructor(name, breed) {
+          this.name = name;
+          this.breed = breed;
+        }
+
+        bark() {
+          console.log(`Bark Bark! My name is ${this.name}`);
+        }
+
+        cuddle() {
+          console.log(`I love you owner!`);
+        }
+
+        static info() {
+          console.log('Dog class');
+        }
+
+        get description() {
+          return `${this.name} is a ${this.breed} type of dog`;
+        }
+
+        set nicknames(nickname) {
+          this.nick = nickname.trim();
+        }
+
+        get nickname() {
+          return this.nick;
+        }
+      }
+
+      class Cat {
+        constructor(name, type) {
+          this.name = name;
+          this.type = type;
+        }
+
+        meow() {
+          console.log(`Meooooowww! My name is ${this.name}`);
+        }
+      }
+
+      const snickers = new Dog('Snickers', 'King Charles');
+      const sunny = new Dog('Sunny', 'Golden Doodle');
+      const mimi = new Cat('Mimi', 'Cute cat');
+    </script>
+  </body>
+</html>
