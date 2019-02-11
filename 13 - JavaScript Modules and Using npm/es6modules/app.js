@@ -1,6 +1,6 @@
-import { uniq } from 'lodash';
-import insane from 'insane';
-import jsonp from 'jsonp';
+// import { uniq } from 'lodash';
+// import insane from 'insane';
+// import jsonp from 'jsonp';
 import { apiKey as key, url, sayHi, age, dog } from './src/config';
 import User, { createURL, gravatar, test } from './src/user';
 
