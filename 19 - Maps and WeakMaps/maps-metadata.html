@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Maps!</title>
+    <style>
+      button {
+        font-size: 50px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <button>Snakes 🐍</button>
+    <button>Cry 😂</button>
+    <button>Ice Cream 🍦</button>
+    <button>Flamin' 🔥</button>
+    <button>Dancer 💃</button>
+
+    <script>
+      const clickCounts = new Map();
+      const buttons = document.querySelectorAll('button');
+
+      //for each button set a new  item in the map, key will be the button, value will be 0
+      buttons.forEach(button => {
+        clickCounts.set(button, 0);
+        // add event listener on each button
+        button.addEventListener('click', function() {
+          //get the item with the key of this(button)
+          const val = clickCounts.get(this);
+          //set that key to the precious value + 1
+          clickCounts.set(this, val + 1);
+          console.log(clickCounts);
+        });
+      });
+
+      // const clickCounts = new Map();√
+      // const buttons = document.querySelectorAll('button');
+
+      // buttons.forEach(button => {
+      //   clickCounts.set(button, 0);
+      //   button.addEventListener('click', function() {
+      //     const val = clickCounts.get(this);
+      //     clickCounts.set(this, val + 1);
+      //     console.log(clickCounts);
+      //   });
+      // });
+    </script>
+  </body>
+</html>
