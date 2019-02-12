@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Native Promises</title>
+  </head>
+
+  <video controls class="handsome"></video>
+
+  <body>
+    <script>
+      // Fetch API
+      // fetch('https://api.github.com/users/fidalgodev')
+      //   .then(data => data.json())
+      //   .then(data => console.log(data))
+      //   .catch(err => {
+      //     console.error('Upppps');
+      //     console.error(err);
+      //   });
+
+      const video = document.querySelector('.handsome');
+      navigator.mediaDevices
+        .getUserMedia({ video: true })
+        .then(mediaStream => {
+          video.srcObject = mediaStream;
+          video.load();
+          video.play();
+        })
+        .catch(err => console.log(err));
+    </script>
+  </body>
+</html>
